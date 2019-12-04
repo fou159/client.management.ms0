@@ -12,6 +12,10 @@ public class Operations extends BaseEntity {
     @ManyToOne
     private Client client;
 
+    public Client getClient() {
+        return client;
+    }
+
     public String getDescription() {
         return description;
     }
