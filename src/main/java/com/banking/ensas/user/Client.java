@@ -1,8 +1,12 @@
 package com.banking.ensas.user;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.Entity;
 
 @Entity
+@OnDelete(action = OnDeleteAction.CASCADE)
 public class Client extends User {
     private String Address;
     private String phone;

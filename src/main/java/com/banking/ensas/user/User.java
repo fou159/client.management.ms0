@@ -34,7 +34,7 @@ public class User extends BaseEntity {
     private String Password;
     @Transient
     private String RePassword;
-    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
+    @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private List<Role> Roles;
 
 

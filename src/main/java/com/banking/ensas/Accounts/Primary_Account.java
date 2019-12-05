@@ -3,12 +3,14 @@ package com.banking.ensas.Accounts;
 import com.banking.ensas.Transaction.PrimaryTransaction;
 import com.banking.ensas.user.Client;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Primary_Account extends Account {
 
     @OneToMany(fetch = FetchType.LAZY)

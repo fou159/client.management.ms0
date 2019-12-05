@@ -1,18 +1,19 @@
 package com.banking.ensas.Accounts;
 
 import com.banking.ensas.core.BaseEntity;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.type.UUIDCharType;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.UUID;
 
 @MappedSuperclass
-public class Account extends BaseEntity {
+public class Account extends BaseEntity implements Serializable {
 
     @Id
-    @Column(columnDefinition = "uuid-char",unique = true)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    UUIDCharType accountNumber;
+    @Column(unique = true)
+    Integer accountNumber;
 
     Long accountBalance;
 
@@ -24,11 +25,11 @@ public class Account extends BaseEntity {
         this.accountBalance = accountBalance;
     }
 
-    public UUIDCharType getAccountNumber() {
+    public Integer getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(UUIDCharType accountNumber) {
+    public void setAccountNumber(Integer accountNumber) {
         this.accountNumber = accountNumber;
     }
 }

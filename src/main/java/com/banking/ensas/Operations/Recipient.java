@@ -3,8 +3,10 @@ package com.banking.ensas.Operations;
 import com.banking.ensas.core.BaseEntity;
 import com.banking.ensas.user.Client;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Recipient extends BaseEntity {
 
 

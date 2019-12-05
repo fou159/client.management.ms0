@@ -1,6 +1,7 @@
 package com.banking.ensas;
 
 
+import org.hibernate.type.UUIDCharType;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,6 @@ public class UsersMangement {
 
     public static void main(String[] args) {
         SpringApplication.run(UsersMangement.class,args);
+
     }
 }
